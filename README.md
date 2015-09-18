@@ -45,7 +45,7 @@ docker run --name survey_prod -d \
 In European XFEL, since we aren't running MySQL locally in the container and we only use SSL, to start the image we are running:
 ```
 docker run --name survey_prod -d \
-	--publish 4440:443 --env 'LIMESURVEY_SUBDOMAIN="survey/"' \
+	--publish 4440:443 \
 	--volume /srv/docker/limesurvey/tmp:/app/survey/tmp \
 	--volume /srv/docker/limesurvey/upload:/app/survey/upload \
 	--volume /srv/docker/limesurvey/application/config:/app/survey/application/config \
